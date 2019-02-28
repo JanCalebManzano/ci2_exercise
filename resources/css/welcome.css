@@ -1,0 +1,19 @@
+#welcome-vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+#cover {
+    margin-top: 125px;
+}
+
+#frmLogin, #frmSignup {
+    padding: 20px;
+}
+
+    form fieldset {
+        margin-bottom: 15px;
+    }
