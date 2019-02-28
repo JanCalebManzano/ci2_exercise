@@ -36,7 +36,6 @@ const editSchedule = ( schedID, description ) => {
             swal.showInputError("You need to write something!");
             return false;
         } else {
-            // swal("Nice!", "You wrote: " + inputValue, "success");
             var settings = {
                 "async": true,
                 "crossDomain": true,

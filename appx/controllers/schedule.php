@@ -33,4 +33,22 @@ class Schedule extends CI_Controller {
         echo json_encode( $response );
     }
 
+    function createSchedule() {
+        $schedule = array(
+            "scheduledAt" => $this->input->post("scheduledAt"),
+            "description" => $this->input->post("description"),
+            "createdBy" => $this->input->post("createdBy")
+        );
+
+        $this->load->model( "model_schedule" );
+        $query = $this->model_schedule->createSchedule( $schedule );
+
+        $response = array(
+            "error" => false,
+            "query" => $query
+        );
+
+        echo json_encode( $response );
+    }
+
 }

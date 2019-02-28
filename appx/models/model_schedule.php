@@ -16,6 +16,20 @@
             $isUpdated = $this->db->update( "tbl_schedule", array( "description" => $schedule["description"] ), array( "ID" => $schedule["schedID"] ) );
             return $this->db->last_query();
         }
+
+        // REST
+        public function getAllSchedules(){  
+            $this->db->select("ID, scheduledAt, description, createdAt, createdBy, isActive");
+            $this->db->from("tbl_schedule");
+            $this->db->order_by("scheduledAt", "asc"); 
+            $query = $this->db->get();
+
+            if($query->num_rows() > 0){
+                return $query->result_array();
+            }else{
+                return 0;
+            }
+        }
     
     }
 
