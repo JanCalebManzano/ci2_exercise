@@ -4,6 +4,9 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
+		if( $this->session->userdata("isLoggedIn") == true )
+			redirect( "dashboard" );
+
 		$data["title"] = "Welcome";
 		$data["signup"] = false;
 		$this->load->view( "pages/welcome", $data );		

@@ -49,11 +49,8 @@
             <div class="col-8 offset-2">
                 
                 <div class="card bg-dark text-white">
-                    <div class="card-body">
-                        Here's your schedule for today,
-                        <i class="text-info">
-                            <?php echo date("d-M-Y"); ?>
-                        </i>
+                    <div class="card-body" id="schedule-info">
+                        <!-- RESPONSE.MESSAGE -->
                     </div>
                 </div>
 
@@ -78,3 +75,5 @@
     window.sessionStorage.setItem( "userID", "<?php echo $this->session->userdata("ID"); ?>" );    
 </script>
 <script src="<?php echo base_url("resources/js/dashboard.js"); ?>"></script>
+
+<?php $this->load->view( "partials/error" ); ?>

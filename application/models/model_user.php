@@ -2,6 +2,14 @@
 
     class Model_user extends CI_Model {
     
+        function getUserWithID( $userID ) {
+            $this->db->where( "ID", $userID );
+            $this->db->where( "isActive", true );
+            $query = $this->db->get( "tbl_user" );
+
+            return $query->result_array();
+        }
+
         function getUserWithEmailAndPassword( $user ) {
             $this->db->where( "email", $user["email"] );
             $this->db->where( "password", $user["password"] );

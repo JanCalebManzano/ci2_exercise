@@ -25,6 +25,7 @@ $lang['less_than']			= "The %s field must contain a number less than %s.";
 $lang['greater_than']		= "The %s field must contain a number greater than %s.";
 $lang['isEmailUnique']		= "The %s field must be unique.";
 $lang['isEmailExisting']	= "Account does not exist.";
+$lang['regex_check_datetime']	= "The %s field is not in a valid date/time format (HH:mm:ss).";
 
 
 /* End of file form_validation_lang.php */

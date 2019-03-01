@@ -65,6 +65,7 @@ class Auth extends CI_Controller {
 
             if( $isInserted ) {
                 $userData = array(
+                    "ID" => $this->db->insert_id(),
                     "email" => $newUser["email"],
                     "isLoggedIn" => true
                 );
